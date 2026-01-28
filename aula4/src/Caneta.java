@@ -1,25 +1,60 @@
 public class Caneta {
     private String modelo;
     private float ponta;
+    private String cor;
+    private boolean tampada;
 
-    public String getModelo(){
-        return this.modelo;
+    public Caneta(String modelo, String cor, float ponta) {
+        this.modelo = modelo;
+        this.ponta = ponta;
+        this.cor = cor;
+        this.tampar();
     }
 
-    public void setModelo(String m){
-        this.modelo = m;
+    public String getModelo() {
+        return modelo;
     }
 
-    public float getPonta(){
-        return this.ponta;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
-    public void setPonta(float p){
-        this.ponta = p;
+    public float getPonta() {
+        return ponta;
     }
-    public void status (){
-        System.out.println("Sobre a Caneta:");
-        System.out.println("Modelo: " + this.modelo);
-        System.out.println("Ponta: " + this.ponta);
+
+    public void setPonta(float ponta) {
+        this.ponta = ponta;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public boolean getTampada() {
+        return tampada;
+    }
+
+    public void setTampada(boolean tampada) {
+        this.tampada = tampada;
+    }
+
+    public void tampar() {
+        this.tampada = true;
+    }
+
+    public void destampar() {
+        this.tampada = false;
+    }
+
+    public void status() {
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Ponta: " + ponta);
+        System.out.println("Cor: " + cor);
+        System.out.println("Tampada: " + (tampada ? "Sim" : "Não"));
     }
 }
