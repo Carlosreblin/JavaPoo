@@ -4,8 +4,11 @@ public class App {
         
         //Pessoa p[] = {new Pessoa("Jubileu", 22 , 'M')};
         Gafanhoto g[] = {new Gafanhoto("Jubileu", 22, 'M', "juba"), new Gafanhoto("Creuza", 12, 'F', "creuzita")};
-        
-        System.out.println(v[0].toString());
-        System.out.println(g[0].toString());
+
+        Visualizacao vis[] = {new Visualizacao(g[0], v[2]), new Visualizacao(g[0], v[1])};
+        vis[0].avaliar();
+        vis[1].avaliar(70f);
+        System.out.println(vis[0].toString());
+        System.out.println(vis[1].toString());
     }
 }
